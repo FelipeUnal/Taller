@@ -22,6 +22,39 @@ public class Taller {
         z = new int[a];
     } 
     
+    static int Punto3(int a, int b, int c){
+        int d[]; 
+        d = new int[3];
+        if(((a>b)&&(a>c))||((a==b)&&(a>c))||((a>b)&&(a==c))||((a==b)&&(a==c))){
+            d[0] = a;
+        }else if(((b>a)&&(b>c))||((b>a)&&(b==c))){
+            d[0] = b;
+        }else if((c>a)&&(c>b)){
+            d[0] = c;
+        } 
+        if(((a<b)&&(a>c))||((a>c)&&(a<b))||((a==b)&&(a<c))||((a<b)&&(a==c))){
+            d[1] = a;
+        }else if(((b==a)&&(b==c))||((b==a)&&(b>c))||((b>a)&&(b<c))||((b<a)&&(b>c))||((b<a)&&(b==c))){
+            d[1] = b;
+        }else if(((c==a)&&(c>b))||((c>a)&(c==b))||((c>a)&&(c<b))||((c<a)&&(c>b))){
+            d[1] = c;
+        } 
+        if((a<b)&&(a<c)){
+            d[2] = a;
+        }else if(((b<a)&&(b<c))||((b==a)&(b<c))){
+            d[2] = b;
+        }else if(((c==a)&&(c==b))||((c<a)&&(c<b))||((c<a)&&(c==b))||((c==a)&&(c<b))){
+            d[2] = c;
+        }
+        System.out.println("El orden es: ");
+        System.out.println(d[0]);
+        System.out.println(d[1]);
+        System.out.println(d[2]);
+        System.out.println(" ");
+        System.out.print("El mayor nuemro es: ");
+        return d[0];
+    }
+    
     public static void main(String[] args) {
         
         java.util.Scanner teclado = new java.util.Scanner(System.in);
@@ -34,10 +67,20 @@ public class Taller {
         System.out.println(Math.floor(c));
         
         System.out.println(" ");
+        System.out.println("Ejercicio 3 ");
+        System.out.println("Ingresa 3 numeros: ");
+        int i = teclado.nextInt();
+        int j = teclado.nextInt();
+        int k = teclado.nextInt();
+        System.out.println(" ");
+        int l = Punto3(i,j,k);
+        System.out.println(" ");
+        System.out.println(l);
+        System.out.println(" ");
         System.out.println("Ejercicio 2 ");
-        System.out.print("Ingresa el numero de Histogramas: ");
+        System.out.print("Ingresa el numero de Historgramas que quieres realizar (Maximo 5):");
         int z = teclado.nextInt();
-        System.out.println(z);
+        Punto2(z);
         System.out.println(" ");
         
         
