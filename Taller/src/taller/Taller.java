@@ -27,7 +27,7 @@ public class Taller {
         double b = teclado.nextDouble();
         double c = Punto1(a,b);
         System.out.println(" ");
-        System.out.println(c);
+        System.out.println(Math.floor(c));
         
     }
     
