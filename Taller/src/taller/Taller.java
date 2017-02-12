@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package taller;
 
-/**
- *
- * @author Estudiante
- */
 public class Taller {
     
     static double Punto1(double a, double b){
@@ -17,10 +9,35 @@ public class Taller {
         return ((r*r)*3.141592); 
     }
     
-    static void Punto2(int a){
-        int z[];
-        z = new int[a];
+    static void Punto2_1(int[] v){
+        for(int i = 0; i < v.length; i++){
+            v[i] = (int)(Math.random() * 15);
+        }
     } 
+    static void Punto2_2(int[] v){
+        int[] rep = new int[v.length];
+        for(int i = 0; i < v.length; i++){
+            int a = 0;
+            for(int j = 0; j < v.length; j++){
+                if(v[j] == v[i]){
+                    a++;
+                }
+            }
+            if((rep[i] == 0)){
+                System.out.print(v[i]+": ");
+                for(int k = 0; k < a; k++){
+                    System.out.println("*");
+                }
+                System.out.println();
+            }
+            for (int j = 0; j < v.length; j++){
+                if(v[i]==v[j]){
+                    rep[j]++;
+                }
+            }
+        }
+    }
+    
     
     static int Punto3(int a, int b, int c){
         int d[]; 
@@ -32,7 +49,7 @@ public class Taller {
         }else if((c>a)&&(c>b)){
             d[0] = c;
         } 
-        if(((a<b)&&(a>c))||((a>c)&&(a<b))||((a==b)&&(a<c))||((a<b)&&(a==c))){
+        if(((a<b)&&(a>c))||((a<c)&&(a>b))||((a==b)&&(a<c))||((a<b)&&(a==c))){
             d[1] = a;
         }else if(((b==a)&&(b==c))||((b==a)&&(b>c))||((b>a)&&(b<c))||((b<a)&&(b>c))||((b<a)&&(b==c))){
             d[1] = b;
@@ -67,6 +84,16 @@ public class Taller {
         System.out.println(Math.floor(c));
         
         System.out.println(" ");
+        System.out.println("Ejercicio 2 ");
+        System.out.print("Ingresa el numero de Historgramas que quieres realizar (Maximo 5):");
+        System.out.println("Cantidad de Elementos: ");
+        int z = teclado.nextInt();
+        int[] v = new int[z];
+        Punto2_1(v);
+        Punto2_2(v);
+        System.out.println(" ");
+        
+        System.out.println(" ");
         System.out.println("Ejercicio 3 ");
         System.out.println("Ingresa 3 numeros: ");
         int i = teclado.nextInt();
@@ -76,12 +103,9 @@ public class Taller {
         int l = Punto3(i,j,k);
         System.out.println(" ");
         System.out.println(l);
-        System.out.println(" ");
-        System.out.println("Ejercicio 2 ");
-        System.out.print("Ingresa el numero de Historgramas que quieres realizar (Maximo 5):");
-        int z = teclado.nextInt();
-        Punto2(z);
-        System.out.println(" ");
+        
+        
+
         
         
         
