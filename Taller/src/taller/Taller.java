@@ -9,36 +9,6 @@ public class Taller {
         return ((r*r)*3.141592); 
     }
     
-    static void Punto2_1(int[] v){
-        for(int i = 0; i < v.length; i++){
-            v[i] = (int)(Math.random() * 15);
-        }
-    } 
-    static void Punto2_2(int[] v){
-        int[] rep = new int[v.length];
-        for(int i = 0; i < v.length; i++){
-            int a = 0;
-            for(int j = 0; j < v.length; j++){
-                if(v[j] == v[i]){
-                    a++;
-                }
-            }
-            if((rep[i] == 0)){
-                System.out.print(v[i]+": ");
-                for(int k = 0; k < a; k++){
-                    System.out.println("*");
-                }
-                System.out.println();
-            }
-            for (int j = 0; j < v.length; j++){
-                if(v[i]==v[j]){
-                    rep[j]++;
-                }
-            }
-        }
-    }
-    
-    
     static int Punto3(int a, int b, int c){
         int d[]; 
         d = new int[3];
@@ -86,15 +56,8 @@ public class Taller {
         
         System.out.println(" ");
         System.out.println("Ejercicio 2 ");
-        System.out.print("Ingresa el numero de Historgramas que quieres realizar (Maximo 5):");
-        System.out.println("Cantidad de Elementos: ");
-        int z = teclado.nextInt();
-        int[] v = new int[z];
-        Punto2_1(v);
-        Punto2_2(v);
-        System.out.println(" ");
-        
-        System.out.println(" ");
+      
+            
         System.out.println("Ejercicio 3 ");
         System.out.println("Ingresa 3 numeros: ");
         int i = teclado.nextInt();
