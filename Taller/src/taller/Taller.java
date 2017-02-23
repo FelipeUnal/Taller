@@ -81,7 +81,8 @@ public class Taller {
         double b = teclado.nextDouble();
         double c = Punto1(a,b);
         System.out.print("El area del Circulo es: ");
-        System.out.println(Math.floor(c));
+        System.out.print(Math.floor(c));
+        System.out.println("KM");
         
         System.out.println(" ");
         System.out.println("Ejercicio 2 ");
