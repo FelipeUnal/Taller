@@ -1,6 +1,7 @@
 
 package taller;
 
+
 public class Taller {
     
     static double Punto1(double a, double b){
@@ -8,6 +9,14 @@ public class Taller {
         double r = ((x/2)/3.141592)/1000;//Radio, Conversion a Km
         return ((r*r)*3.141592); 
     }
+    
+    /*static void Punto2(int i,int j, int z, int k){
+        int[] n = new int[z];
+        String[] s = 
+        for(i = 0; z<i; i++){
+            n[i] = ;
+        } 
+    }*/
     
     static int Punto3(int a, int b, int c){
         int d[]; 
@@ -42,21 +51,48 @@ public class Taller {
         return d[0];
     }
     
+    static int Ejercicio2_B(int n){
+        int ei = 0;
+        int inter = (4*n)-3;
+        for(int i = 1; i<=(n*2); i++){
+        //Debe escribirse la condicion en la que se cumpla, y no cuando termine.
+            for(int j = 1; j<=ei; j++){
+                System.out.print(" ");
+            }    
+            if(i>n){System.out.print("*");}
+            else{System.out.print(" ");}
+            for(int j = 1; j<=inter; j++){
+                System.out.print(" ");
+            }    
+            if(i<=(n*2)-1){
+                System.out.println("*");
+            }
+            i++;
+            ei++;
+            inter = inter - 2;            
+        }
+        return n; 
+    }
+    
     public static void main(String[] args) {
         
         java.util.Scanner teclado = new java.util.Scanner(System.in);
         System.out.println("Ejercicio 1");
-        System.out.println("Ingresa los valores :");
-        double a = teclado.nextDouble();
-        double b = teclado.nextDouble();
-        double c = Punto1(a,b);
+        System.out.println("Ingresa el ancho y el largo de la piel:");
+        double a1 = teclado.nextDouble();
+        double b1 = teclado.nextDouble();
+        double c1 = Punto1(a1,b1);
         System.out.print("El area del Circulo es: ");
-        System.out.print(Math.floor(c));
-        System.out.println("Kilometros");
+        System.out.print(Math.floor(c1));
+        System.out.println(" Kilometros Cuadrados");
         
         System.out.println(" ");
         System.out.println("Ejercicio 2 ");
-      
+        System.out.println("Cuantos histogramas quieres hacer :");
+       /*int a = teclado.nextInt();
+        
+        int ac = Punto2();
+      */
             
         System.out.println("Ejercicio 3 ");
         System.out.println("Ingresa 3 numeros: ");
@@ -68,6 +104,15 @@ public class Taller {
         System.out.println(" ");
         System.out.println(l);
         
+        System.out.println(" ");
+        int nb2;
+        System.out.println("Punto 2-B");
+        nb2 = teclado.nextInt();
+        int b2 = Ejercicio2_B(nb2);
+        System.out.println(b2);
+        System.out.println("Imprime asteriscos en diagonal.");
+        System.out.println("La primera diagonal contiene la mitad de la segunda diagonal."); 
+        System.out.println("La segunda diagonal contiene los asteriscos del numero marcado.");
         
 
         
