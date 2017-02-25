@@ -51,6 +51,14 @@ public class Taller {
         return d[0];
     }
     
+    static int Ejercicio2_A(int n){
+        for(int i = 0; i<=n; i++){
+            int b = i*n;
+            System.out.println(n+" x "+i+" = "+b);
+        }
+        return n;
+    }
+    
     static int Ejercicio2_B(int n){
         int ei = 0;
         int inter = (4*n)-3;
@@ -70,8 +78,8 @@ public class Taller {
             i++;
             ei++;
             inter = inter - 2;            
-        }
-        return n; 
+        } 
+        return n;
     }
     
     public static void main(String[] args) {
@@ -105,20 +113,20 @@ public class Taller {
         System.out.println(l);
         
         System.out.println(" ");
+        System.out.println("Punto 2-A");
+        int na1;
+        na1 = teclado.nextInt();
+        System.out.println(Ejercicio2_A(na1));
+        System.out.println("Imprime las tablas de multiplicardel numero escogido,");
+        System.out.println("hasta llegar a su cuadrado.");
+        
+        System.out.println(" ");
         int nb2;
         System.out.println("Punto 2-B");
         nb2 = teclado.nextInt();
-        int b2 = Ejercicio2_B(nb2);
-        System.out.println(b2);
+        System.out.println(Ejercicio2_B(nb2));
         System.out.println("Imprime asteriscos en diagonal.");
         System.out.println("La primera diagonal contiene la mitad de la segunda diagonal."); 
         System.out.println("La segunda diagonal contiene los asteriscos del numero marcado.");
-        
-
-        
-        
-        
-        
     }
-    
 }
