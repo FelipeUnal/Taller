@@ -1,10 +1,12 @@
 
 package taller;
 
-import java.io.PrintStream;
+import static java.lang.Math.floor;
 
 
 public class Taller {
+
+    private static int[] a;
     
     static double Punto1(double a, double b){
         double x = (a/0.001)*b; //Circunferencia, unidades en metros
@@ -101,22 +103,24 @@ public class Taller {
         return n;
     }
     
-    static void Permutacion(){
+    static int Ejercicio2_D(int Tamaño){
         int i;
-        int[] a = new int[4];
-        for(i = 0; i<=4; i++){
-            a[i] = i+1;
+        int k;  
+        int t;
+        int[] b = new int[Tamaño];
+        for(i = 0; i<4; i++){
+            b[i] = i+1;
+            System.out.println(b[i]);
         }
-        permutacion(a,4);
-    }
-    
-    static void Ejercicio2_D(){
-        int n = 4; 
-        int k = 0;      
-        int t = 0;
-        for(int i = 1; i>n; i++){
-            
+        
+        for(i = 0; i<Tamaño; i++){
+            k = (int) floor((Math.random()*Tamaño)+1);
+            t = b[i];
+            b[i] = b[k];
+            b[k] = t;
         }
+        return 0;
+        
     }
         
     public static void main(String[] args) {
@@ -170,13 +174,17 @@ public class Taller {
         
         System.out.println(" ");
         System.out.println("Punto 2-C");
+        int nbf = teclado.nextInt();
         System.out.println(Ejercicio2_C());
         System.out.println("Es una funcion que indica la cantidad de divisores que tiene el numero 96.");
         
-        
-    }
+        System.out.println();
+        System.out.println("Punto 2-D"); 
+        int nd2;
+        System.out.println("Escribe un numero");
+        nd2 = teclado.nextInt();
+        System.out.println(Ejercicio2_D(nd2));
+        System.out.println("Es una funcion que indica la cantidad de divisores que tiene el numero 96.");
 
-    private static void permutacion(int[] a, int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
